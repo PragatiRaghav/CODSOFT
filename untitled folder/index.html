@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Signup Flow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Welcome Screen -->
+    <div class="card welcome-screen" id="welcomeScreen">
+      <h2>Welcome</h2>
+      <p>Please login or sign up to continue using our app.</p>
+      <div class="social">
+        <button class="social-btn fb">f</button>
+        <button class="social-btn tw">t</button>
+      </div>
+      <p>or login with email</p>
+      <button onclick="showForm('signup')" class="main-btn">Sign up</button>
+      <p class="small-text">Already have an account? <a href="#" onclick="showForm('login')">Login</a></p>
+    </div>
+
+    <!-- Sign Up Form -->
+    <div class="card form-screen hidden" id="signupForm">
+      <h2>Sign Up</h2>
+      <p>Please register with your email to continue using our app.</p>
+      
+      <div class="social">
+        <button class="social-btn fb">f</button>
+        <button class="social-btn tw">t</button>
+      </div>
+      <p>or sign up with email</p>
+
+      <input type="email" placeholder="Enter your email" />
+      <input type="password" placeholder="Create a password" />
+
+      <div class="checkbox-row">
+  <input type="checkbox" id="agree" checked />
+  <label for="agree">
+    I agree with the <a href="#">privacy policy</a>
+  </label>
+</div>
+
+      <button class="main-btn">Sign Up</button>
+      <p class="small-text">Already have an account? <a href="#" onclick="showForm('login')">Login</a></p>
+    </div>
+
+    <!-- Login Form -->
+    <div class="card form-screen hidden" id="loginForm">
+      <h2>Login Now</h2>
+      <p>Please login to continue using our app.</p>
+      <div class="social">
+        <button class="social-btn fb">f</button>
+        <button class="social-btn tw">t</button>
+      </div>
+      <p>or login with email</p>
+      <input type="email" placeholder="Enter your email" />
+      <input type="password" placeholder="Password" />
+      <a class="forgot" href="#">Forgot Password?</a>
+      <button class="main-btn">Login</button>
+      <p class="small-text">Don’t have an account? <a href="#" onclick="showForm('signup')">Sign up</a></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
